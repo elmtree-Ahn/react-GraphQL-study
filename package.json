@@ -1,15 +1,17 @@
 {
-  "name": "react+graphQL",
+  "name": "local-api",
   "version": "1.0.0",
   "main": "index.js",
+  "repository": "https://github.com/elmtree-Ahn/react-GraphQL-study.git",
+  "author": "elmtree-Ahn <clfclf3138@gmail.com>",
   "license": "MIT",
-  "private": true, 
-  "workspaces" : [
+  "private": true,
+  "workspaces": [
     "client",
     "server"
-  ], 
-  "scripts" : {
-    "client" : "yarn workspace client start",
-    "server" : "yarn workspace server start"
+  ],
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server": "yarn workspace server start"
   } 
 }
