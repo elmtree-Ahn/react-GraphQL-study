@@ -1,7 +1,13 @@
+import MsgInput from "./MsgInput"
+
 const MsgItem = ({
+  id,
   userId,
   timestamp,
-  text
+  text,
+  onUpdate,
+  isEditing,
+  startEdit
 }) => (
   <li className="messages__item">
     <h3>
@@ -17,8 +23,15 @@ const MsgItem = ({
         })}
       </sub>
     </h3>
+    {isEditing ? (
+      <>
+        <MsgInput mutate={onUpdate} id={id}/>
+      </>
+    ) : text }
 
-    {text}
+    <div className="messages__buttons">
+      <button onClick={startEdit}>수정</button>
+    </div>
   </li>
 )
 
